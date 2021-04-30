@@ -1,17 +1,109 @@
 .gamebody {
-  background-color: tomato;
+  /* background-color: tomato; */
   min-width: 100%;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  background: url('./1_1-yZ6DPAyGjpbdvDZvnxoQ.jpeg') no-repeat center center fixed;
+  background-size: cover;
 }
 
 .gameframe {
   width: 700px;
-  height: 500px;
+  height: 300px;
   border: 1px solid black;
   margin: 50px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gameframe div {
+  justify-content: center;
+  align-items: center;
+  font-weight: 900;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: 900;
+  font-size: 22pt;
+}
+
+a:hover {
+  font-size: 26pt;
+  color: white;
+}
+
+
+.onegame {
+  display: flex;
+  height: 100px;
+  border: 1px solid white;
+  width: 100%;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.blockcard {
+  display: flex;
+  height: 100px;
+  width: 150px;
+  border: 1px solid white;
+  font-weight: 900;
+  font-size: 15pt;
+  background-color: rgb(177, 218, 153);
+}
+
+.rowdiv {
+  width: 700px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.divQue {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: url('./dark-question-2-1444334.jpg')no-repeat center center fixed;
+  background-size: cover;;
+}
+
+.formque {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputque {
+  width: 400px;
+  height: 60px;
+  margin:15px;
+  border-radius: 8px;
+}
+
+.linkbutton {
+  height: 70px;
+  font-size: 13pt;
+  /* border-radius: 8px; */
+}
+.btnQuestion{
+  border-radius: 8px;
+}
+.linkbutton:hover {
+  text-decoration: none;
+  font-size: 13pt;
+  color: black;
+}
+.linckBtn:hover{
+  font-size: 22pt;
+  color:rgb(67, 64, 64)
 }
