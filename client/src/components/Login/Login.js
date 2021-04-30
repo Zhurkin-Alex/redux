@@ -28,7 +28,7 @@ function Login(props) {
         <div className="form-box">
           <form className="form" onSubmit={loginHandler}>
             <div className="mb-3">
-              <label for="exampleInputEmail1" className="form-label">
+              <label htmlFor="exampleInputEmail1" className="form-label">
                 Email
               </label>
               <input
@@ -39,7 +39,7 @@ function Login(props) {
               />
             </div>
             <div className="mb-3">
-              <label for="exampleInputEmail1" className="form-label">
+              <label htmlFor="exampleInputEmail1" className="form-label">
                 Password
               </label>
               <input
