@@ -6,7 +6,7 @@ import { useSelector } from "react-redux"
 
 export default function Game() {
 
-  const state = useSelector((store) => store)
+  const store = useSelector((store) => store)
 
   // useEffect(() => {
   //   async function FindQuestions() {
