@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./login.css";
 import { Link } from "react-router-dom";
 
 function Login(props) {
+
+  // useEffect(()=>{
+  //   fetch('/auth/')
+  // })
   const loginHandler = (e) => {
     e.preventDefault();
     const {

@@ -4,3 +4,10 @@ export function addUser (payload) {
   payload,
   };
   }
+
+export function loadUsers (payload) {
+  return {
+  type: "LOADUSERS",
+  payload,
+  };
+  }
