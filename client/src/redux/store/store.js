@@ -5,3 +5,4 @@ import rootReducer from '../reducers/allreducer'
 
 const store = createStore(rootReducer, composeWithDevTools())
 
+export default store
