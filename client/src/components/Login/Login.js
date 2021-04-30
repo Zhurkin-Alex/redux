@@ -1,12 +1,17 @@
-import React, { useEffect } from "react";
+import React, { useEffect,useState } from "react";
+import {useSelector} from 'react-redux'
 import "./login.css";
 import { Link } from "react-router-dom";
+import {addUser} from '../../redux/actions/addUser'
+import store from '../../redux/store/store'
 
 function Login(props) {
+  const[name,setname]= useState()
+  const state = useSelector((store)=>store)
+  console.log(state.AlexReducer);
+//  console.log(state.AlexReducer.user[0].UserPlay.name); 
 
-  // useEffect(()=>{
-  //   fetch('/auth/')
-  // })
+  
   const loginHandler = (e) => {
     e.preventDefault();
     const {
@@ -14,7 +19,7 @@ function Login(props) {
       password: { value: password },
     } = e.target;
     console.log(email, password);
-    fetch("/login", {
+    fetch("/auth/login", {
       method: "POST",
       headers: {
         "Content-type": "Application/json",
@@ -23,7 +28,11 @@ function Login(props) {
         email,
         password,
       }),
-    });
+    })
+    .then(res=>res.json())
+    // .then(data=>console.log(data))
+    .then(data=>store.dispatch(addUser(data)))
+    
   };
 
   return (
@@ -53,9 +62,12 @@ function Login(props) {
                 aria-describedby="emailHelp"
               />
             </div>
-            <Link to="/game">
               <button type="submit" className="btn btn-primary">
                 Login
+              </button>
+            <Link to="/game">
+            <button  className="btn btn-primary login-game">
+                Game
               </button>
             </Link>
           </form>

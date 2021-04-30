@@ -7,7 +7,7 @@ import store from '../../redux/store/store'
 
 function Registration(props) {
 const state = useSelector((store)=>store)
-console.log(state);
+console.log('state',state.UserPlay.name);
 
 const registHandler= (e)=>{
   e.preventDefault()
