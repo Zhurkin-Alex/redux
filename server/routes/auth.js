@@ -22,7 +22,7 @@ router.post('/login', async(req,res)=>{
     const UserPlay = await User.findOne({
       email,password
     })
-    if(newUser){
+    if(UserPlay){
 
       res.status(200).json({UserPlay})
     }

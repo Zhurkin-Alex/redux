@@ -1,0 +1,13 @@
+.nav-box{
+  padding: 20px;
+  background-color: rgba(139, 133, 133, 0.877);
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 28px;
+  color: aliceblue;
+}
+.linck a{
+  color: aliceblue;
+  text-decoration: none;
+  margin-right: 60px;
+}
