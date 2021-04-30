@@ -1,0 +1,10 @@
+.form-box{
+  display: flex;
+  justify-content: center;
+}
+.form{
+  max-width: 45%;
+}
+.login-game{
+  margin-left: 15px;
+}

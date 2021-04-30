@@ -1,9 +1,16 @@
-import {ADD} from './actiontupes'
 
 
-export function add (payload) {
+export function addGame (payload) {
   return {
-  type: ADD,
+  type: "ADDGAME",
   payload,
-  };
   }
+  }
+
+  export function addPoints (payload) {
+    return {
+    type: "ADDPOINTS",
+    payload,
+    }
+    }
+  
