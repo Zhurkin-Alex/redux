@@ -15,6 +15,21 @@ router.post('/registration', async(req,res)=>{
   }
 })
 
+router.post('/login', async(req,res)=>{
+  try {
+    const {email,password}=req.body
+    // console.log(name,password);
+    const UserPlay = await User.findOne({
+      email,password
+    })
+    if(newUser){
+
+      res.status(200).json({UserPlay})
+    }
+  } catch (error) {
+    res.status(404).json({ succes: false, msg: error.message });
+  }
+})
 
 
 module.exports = router

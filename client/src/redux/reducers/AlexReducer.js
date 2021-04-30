@@ -4,9 +4,13 @@ const AlexReducer = (state={}, action)=>{
     case 'ADDUSER':
     return {
       ...state,
-      user:action.payload
+      user:(state.user== undefined) ? state.user=[action.payload] : [...state.user, action.payload]
     };
-
+    case 'LOADUSERS':
+      return {
+        ...state,
+        user: action.payload
+      }
 
     default:
     return state;

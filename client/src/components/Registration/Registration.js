@@ -1,11 +1,13 @@
 import React from "react";
+import {useSelector} from 'react-redux'
 import './registration.css'
 import {addUser} from '../../redux/actions/addUser'
 import store from '../../redux/store/store'
 
 
 function Registration(props) {
-
+const state = useSelector((store)=>store)
+console.log(state);
 
 const registHandler= (e)=>{
   e.preventDefault()
@@ -27,7 +29,6 @@ const registHandler= (e)=>{
     }),
   })
   .then(res=>res.json())
-  .then(data=>console.log('data', data))
   .then(data=> store.dispatch(addUser(data)))
 }
 
