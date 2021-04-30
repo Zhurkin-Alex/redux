@@ -6,6 +6,7 @@ import Mainpage from '../Mainpage';
 import Registration from '../Registration/Registration';
 import Login from '../Login/Login';
 import Game from '../Game/Game';
+import Onecard from '../Game/Onecard';
  
 
 
@@ -18,7 +19,9 @@ function App() {
           <NavigationBar />
 
           <Switch>
-
+          <Route path="/games/:id">
+          <Onecard />
+        </Route>
           <Route exact path="/" >
             <Mainpage />
           </Route>

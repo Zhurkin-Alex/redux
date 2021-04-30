@@ -7,7 +7,7 @@ import store from '../../redux/store/store'
 
 function Registration(props) {
 const state = useSelector((store)=>store)
-console.log('state',state.UserPlay.name);
+// console.log('state', state.UserPlay.name);
 
 const registHandler= (e)=>{
   e.preventDefault()
@@ -28,8 +28,8 @@ const registHandler= (e)=>{
       password
     }),
   })
-  .then(res=>res.json())
-  .then(data=> store.dispatch(addUser(data)))
+  // .then(res=>res.json())
+  // .then(data=> store.dispatch(addUser(data)))
 }
 
 
