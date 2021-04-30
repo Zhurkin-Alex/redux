@@ -2,7 +2,12 @@ const mongoose = require("mongoose")
 const Question = require('./Question.js')
 
 
-
+mongoose.connect('mongodb://localhost:27017/MyGame', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useCreateIndex: true,
+  useFindAndModify: false
+})
 
 async function seeder() {
 
